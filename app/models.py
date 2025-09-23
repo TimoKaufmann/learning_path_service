@@ -1,6 +1,5 @@
 from typing import List, Optional, Literal, Dict
 from pydantic import BaseModel, Field
-from datetime import dat
 from datetime import datetime
 
 MilestoneType = Literal["skill", "topic"]
@@ -23,9 +22,6 @@ class Milestone(BaseModel):
     topicId: Optional[str] = None
     resources: List[ResourceRef] = Field(default_factory=list)
     status: MilestoneStatus = "pending"
-
-class LearnningPath(BaseModel):
-    pathId:
 
 class LearningPath(BaseModel):
     pathId: str
